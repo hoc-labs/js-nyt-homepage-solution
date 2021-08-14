@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html {
+  --primary-color: #c72727;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  --link-color: #333;
+  --sports-color: #f99500;
+  --arts-color: #a66bbe;
+  --tech-color: #009cff;
+  --science-color: #3bd142;
+  --food-color: #d1483b;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-color);
+}
+
+article img {
+  width: 100%;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+
+@media screen and (min-width: 600px) {
+  .articles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.articles > article {
+  background: #fff;
+  padding: 16px;
+}
+
+.category {
+  color: #fff;
+  font-size: 9px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.category-sports {
+  background-color: var(--sports-color);
+}
+.category-arts {
+  background-color: var(--arts-color);
+}
+.category-tech {
+  background-color: var(--tech-color);
+}
+.category-food {
+  background-color: var(--food-color);
+}
+.category-science {
+  background-color: var(--science-color);
+}
+
+.showcase {
+  color: #fff;
+  padding: 32px;
+  height: 40vh;
+  background: url("../images/robot.jpg") center/cover;
+}
+
+.showcase.food {
+  background: url("../images/french-toast.jpg") center/cover;
+}
+
+@media screen and (min-width: 600px) {
+  .showcase p {
+    width: 50%;
+  }
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/********************************* Showcase **************************/
+.nav-container {
+  background-color: #fff;
+  padding: 18px;
+  display: flex;
+  width: 100%;
+}
+
+/* this style centers the image within the anchor */
+.nav-container > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container .logo {
+  width: 180px;
+}
+
+/* default style for mobile width */
+.nav-container ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+/* style for larger widths */
+@media screen and (min-width: 600px) {
+  .nav-container ul {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+.nav-container li {
+  font-weight: bold;
+}
+
+.nav-container a:hover {
+  color: var(--primary-color);
+}
+
+.footer-container {
+  background-color: var(--dark-color);
+  color: #fff;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 32px;
+}
+
+@media screen and (min-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.footer-container img {
+  width: 150px;
+}
+
+.footer-container a {
+  color: #fff;
+}
+
+.footer-container a:hover {
+  color: red;
+}
+
+.footer-container input[type="email"] {
+  padding: 8px;
+  margin-bottom: 8px;
+}
